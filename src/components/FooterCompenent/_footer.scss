@@ -1,0 +1,15 @@
+@import "./footerVariables";
+
+.footer {
+  background-color: $footer-background-color;
+  color: $footer-text-color;
+
+  h2 {
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}

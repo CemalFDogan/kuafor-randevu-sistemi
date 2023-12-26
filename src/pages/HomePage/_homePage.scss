@@ -1,0 +1,67 @@
+@import "homePageVariables";
+
+.homePage {
+  .heroSection {
+    .carousel {
+      .carousel-item {
+        height: 500px;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 500px;
+          object-fit: cover;
+        }
+        .carousel-caption {
+          position: absolute;
+          bottom: 20%;
+          left: 10%;
+          right: 10%;
+          color: $textColor;
+          h3 {
+            font-size: 2.5rem;
+            font-weight: $headingFontWeight;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .servicesSection {
+    .card {
+      .card-img {
+        height: 100px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .testimonialsSection {
+    .carousel-item {
+      img {
+        height: 300px;
+        object-fit: cover;
+      }
+      p {
+        font-style: italic;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-md) {
+    .heroSection {
+      .carousel {
+        .carousel-item {
+          height: 300px;
+          img {
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+}

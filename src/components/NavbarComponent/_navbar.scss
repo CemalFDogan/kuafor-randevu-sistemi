@@ -1,0 +1,26 @@
+@import './navbarVariables';
+
+.custom-navbar {
+  background-color: #f8f9fa; // Temaya uygun bir renk
+
+  .navbar-brand {
+    font-size: 1.55rem; // Logo boyutu
+  }
+
+  .nav-link {
+    color: #555; // Link rengi
+
+    &:hover {
+      color: #000; // Hover rengi
+    }
+  }
+
+  .nav-button {
+    background-color: #007bff; // Buton rengi
+    color: white; // Buton yazı rengi
+
+    &:hover {
+      background-color: #0056b3; // Hover rengi
+    }
+  }
+}
