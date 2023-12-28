@@ -24,9 +24,9 @@ export default function MyApp() {
   const [userRole, setUserRole] = useState('');  // 'admin' veya 'user'
 
   // Kullanıcı başarıyla giriş yaptığında çağrılacak fonksiyon
-  const handleLoginSuccess = (role) => {
+  const handleLoginSuccess = () => {
     setIsLoggedIn(true);
-    setUserRole(role);
+    setUserRole("admin");
   };
 
 
@@ -43,7 +43,14 @@ export default function MyApp() {
           <Route path="/login-register" element={<LoginRegisterPage onLoginSuccess={handleLoginSuccess} />} />
           <Route path="/salon" element={<SalonPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/admin" element={<AdminPage />} />,
         </Routes>
+
+        {/* {
+          userRole==="admin" (<h2>cemal</h2>)
+        } */}
+      
+
       </main>
       <FooterComponent />
     </Router>
