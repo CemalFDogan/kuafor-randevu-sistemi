@@ -1,0 +1,36 @@
+
+
+.hakkimizda-container {
+  background-color: #f8f9fa; /* Arka plan rengi */
+  padding: 50px 0; /* İçerikten dış kenara boşluk */
+}
+
+.hakkimizda-content {
+  display: flex;
+  flex-direction: row; /* Varsayılan olarak zaten yatay yönlüdür, ama belirtmek iyidir */
+  justify-content: space-between; /* Sol ve sağ arasında boşluk */
+  max-width: 1200px; /* İçeriği sınırla */
+  margin: 0 auto; /* Ortala */
+}
+
+.text-container {
+  flex: 1; /* Metin içeriğini esnek yap, resim boyutu kadar genişlik alır */
+  padding-right: 20px; /* Metin ve resim arasındaki boşluk */
+}
+
+.image-container {
+  flex: 1; /* Resim içeriğini esnek yap */
+}
+
+h2 {
+  color: #007bff; /* Başlık rengi */
+}
+
+p {
+  color: #333333; /* Metin rengi */
+}
+
+.img-fluid {
+  max-width: 100%; /* Resmin maksimum genişliği, container'a sığacak kadar */
+  height: auto; /* Oranları koru */
+}
