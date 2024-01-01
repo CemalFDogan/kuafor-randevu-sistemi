@@ -26,7 +26,7 @@ export default function MyApp() {
   // Kullanıcı başarıyla giriş yaptığında çağrılacak fonksiyon
   const handleLoginSuccess = () => {
     setIsLoggedIn(true);
-    setUserRole("admin");
+    setUserRole("user");
   };
 
 
@@ -49,10 +49,12 @@ export default function MyApp() {
         {/* {
           userRole==="admin" (<h2>cemal</h2>)
         } */}
+
+
       
 
       </main>
-      <FooterComponent />
+      {!isLoggedIn && <FooterComponent />}
     </Router>
   );
 }

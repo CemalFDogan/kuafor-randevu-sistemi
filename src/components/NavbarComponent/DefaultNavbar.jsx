@@ -9,6 +9,7 @@ export default function DefaultNavbar() {
                 <Nav className="mr-auto">
                     <Nav.Link as={Link} to="/" className="nav-link">Ana Sayfa</Nav.Link>
                     <Nav.Link as={Link} to="/about" className="nav-link">Hakkımızda</Nav.Link>
+                    <Nav.Link as={Link} to="/team" className="nav-link">Ekiple Tanış</Nav.Link>
                 </Nav>
 
                 {/* Ortadaki logo */}
@@ -16,6 +17,8 @@ export default function DefaultNavbar() {
 
                 {/* Sağ taraftaki bağlantılar ve butonlar */}
                 <Nav>
+                <Nav.Link as={Link} to="/services" className="nav-link">Hizmetler</Nav.Link>
+                    <Nav.Link as={Link} to="/salon" className="nav-link">Salon</Nav.Link>
                     <Nav.Link as={Link} to="/contact" className="nav-link">İletişim Sayfası</Nav.Link>
                     <Button as={Link} to="/login-register" className="nav-button">Kayıt/Oturum Aç</Button>
                 </Nav>
