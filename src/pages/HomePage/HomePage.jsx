@@ -2,52 +2,49 @@ import { Carousel, Card, Button, Container, Row, Col } from 'react-bootstrap';
 import homeData from '../../data/homeData';  // Doğru yolu belirtin
 
 export default function HomePage() {
-  const { heroImages, services, testimonials } = homeData.homePage;
-
   return (
-    <Container className="homePage">
-      <Row className="heroSection">
-        <Carousel>
-          {heroImages.map((img, index) => (
-            <Carousel.Item key={index}>
-              <img className="d-block w-100" src={`/${img.src}`} alt={img.alt} />
-              <Carousel.Caption>
-                <h3>{img.captionHeader}</h3>
-                <p>{img.captionText}</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      </Row>
-
-      <Row className="servicesSection">
-        {services.map((service, index) => (
-          <Col md={4} key={index}>
-            <Card>
-              <Card.Img variant="top" src={`/${service.src}`} alt={service.alt} />
-              <Card.Body>
-                <Card.Title>{service.captionHeader}</Card.Title>
-                <Card.Text>{service.captionText}</Card.Text>
-                <Button variant="primary">{service.buttonText}</Button>
-              </Card.Body>
-            </Card>
-          </Col>
+    <div className="home-page">
+      {/* Slider Bölümü */}
+      <Carousel className="custom-slider">
+        {homeData.sliderImages.map((image, index) => (
+          <Carousel.Item key={index}>
+            <img src={image.src} alt={image.alt} />
+          </Carousel.Item>
         ))}
-      </Row>
+      </Carousel>
 
-      <Row className="testimonialsSection">
-        <Carousel>
-          {testimonials.map((testimonial, index) => (
-            <Carousel.Item key={index}>
-              <img className="d-block w-100" src={`/${testimonial.src}`} alt={testimonial.alt} />
-              <Carousel.Caption>
-                <p>"{testimonial.captionText}"</p>
-                <em>- {testimonial.author}</em>
-              </Carousel.Caption>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      </Row>
-    </Container>
+      {/* Hizmetler Bölümü */}
+      <section className="services-section">
+        <Container>
+          <Row>
+            {homeData.services.map((service, index) => (
+              <Col md={4} key={index}>
+                <div className="service-card">
+                  <div className="icon">{service.icon}</div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+
+      {/* Müşteri Yorumları */}
+      <section className="testimonials-section">
+        <Container>
+          <Row>
+            {homeData.testimonials.map((testimonial, index) => (
+              <Col md={6} key={index}>
+                <div className="testimonial">
+                  <p>"{testimonial.quote}"</p>
+                  <div className="author">- {testimonial.author}</div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+    </div>
   );
 }

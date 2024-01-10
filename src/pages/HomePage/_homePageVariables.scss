@@ -1,20 +1,12 @@
-// Renk Tanımlamaları
-$primaryColor: #ff4081;
-$secondaryColor: #6c757d;
-$backgroundColor: #f8f9fa;
-$textColor: #333;
+// Renkler ve diğer değişkenler
+$primary-color: #6D7993;
+$secondary-color: #D5D5D5;
+$accent-color: #E6E2D3;
+$font-family: 'Open Sans', sans-serif;
 
-// Yazı Tipi ve Boyutları
-$fontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$fontSizeBase: 1rem;
-$headingFontWeight: 600;
+// Slider için değişkenler
+$slider-height: 512px;
 
-// Uzunluk ve Boşluklar
-$spacingUnit: 1rem;
-$cardBorderRadius: 0.25rem;
-
-// Responsive Tasarım Breakpoint'leri
-$breakpoint-xs: 320px;
-$breakpoint-sm: 480px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
+// Hizmetler ve Yorumlar bölümü için değişkenler
+$service-card-bg: $secondary-color;
+$testimonial-bg: $accent-color;

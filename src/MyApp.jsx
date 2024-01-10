@@ -11,7 +11,6 @@ import SalonPage from './pages/SalonPage/SalonPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import AdminPage from './pages/AdminPage/AdminPage';
 import UserPage from './pages/UserPage/UserPage';
-import AppointmentsPage from './pages/AppointmentsPage/AppointmentsPage';
 import UserSettings from './pages/UserSettings/UserSettings';
 
 // Bootstrap Nesneleri
@@ -28,12 +27,18 @@ export default function MyApp() {
     setIsLoggedIn(true);
     setUserRole("admin");
   };
+  // Çıkış yapma işlevi
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setUserRole('');
+    // Gerekirse burada ek temizlik işlemleri yapabilirsiniz
+  };
 
 
   return (
     <Router>
       {/* isLoggedIn prop'u ile NavbarComponent çağrısı */}
-      <NavbarComponent isLoggedIn={isLoggedIn} userRole={userRole} />
+      <NavbarComponent isLoggedIn={isLoggedIn} userRole={userRole} onLogout={handleLogout} />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -49,7 +54,7 @@ export default function MyApp() {
         {/* {
           userRole==="admin" (<h2>cemal</h2>)
         } */}
-      
+
 
       </main>
       <FooterComponent />

@@ -1,26 +1,51 @@
 @import './navbarVariables';
 
 .custom-navbar {
-  background-color: #f8f9fa; // Temaya uygun bir renk
+  background-color: $primary-color;
+  padding-left: $navbar-padding-horizontal;
+  padding-right: $navbar-padding-horizontal;
 
   .navbar-brand {
-    font-size: 1.55rem; // Logo boyutu
-  }
+    margin-left: $logo-margin-left; // Logo'nun solundaki boşluk
 
-  .nav-link {
-    color: #555; // Link rengi
+    img {
+      width: $logo-width;
+      height: $logo-height;
+      background-color: $primary-color;
+    }
 
     &:hover {
-      color: #000; // Hover rengi
+      color: $link-hover-color;
     }
   }
 
-  .nav-button {
-    background-color: #007bff; // Buton rengi
-    color: white; // Buton yazı rengi
+  .navbar-toggle {
+    border-color: $secondary-color;
+  }
 
-    &:hover {
-      background-color: #0056b3; // Hover rengi
+  .navbar-collapse {
+    margin-right: $nav-collapse-margin-right; // Navbar.Collapse'ın sağdaki boşluğu
+
+    .nav-link {
+      color:$secondary-color;
+      margin-right: $nav-link-margin-right; // Nav linkler arası boşluk
+
+      &:last-child {
+        margin-right: 0; // Son elemanın sağında boşluk olmamasını sağlıyoruz
+      }
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+
+    .nav-button {
+      background-color: $accent-color;
+      border: none;
+
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
     }
   }
 }

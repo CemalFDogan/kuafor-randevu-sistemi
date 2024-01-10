@@ -3,13 +3,13 @@ import { Row, Col } from 'react-bootstrap';
 
 export default function FooterComponent() {
     return (
-        <footer className="footer bg-dark text-light py-3">
+        <footer className="footer footer-custom bg-dark text-light py-3">
             <div className="container">
                 <Row>
                     <Col md={4}>
                         <h2>İletişim</h2>
-                        <p>Adres: Prestij Mah. Moda Cd. No:5, 06100 Çankaya/Ankara</p>
-                        <p>Telefon: (312) 123 45 67</p>
+                        <p>Adres: 1234 Sokak, Salon Mahallesi, Şehir, Ülke</p>
+                        <p>Telefon: (123) 456 78 90</p>
                         <p>E-posta: contact@prestijkuaför.com</p>
                     </Col>
                     <Col md={4} className="text-center">

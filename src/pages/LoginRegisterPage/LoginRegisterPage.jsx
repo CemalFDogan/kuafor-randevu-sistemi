@@ -17,11 +17,11 @@ export default function LoginRegisterPage({ onLoginSuccess }) {
     const [phoneNumber, setPhoneNumber] = useState('');
 
 
-  /*   useEffect(() => {
-        // Update the document title using the browser API
-        axios.get("apiLinki").then(data => setData(data));
-    });
- */
+    /*   useEffect(() => {
+          // Update the document title using the browser API
+          axios.get("apiLinki").then(data => setData(data));
+      });
+   */
     // Test amaçlı sabit kullanıcı bilgileri
     const testUser = {
         email: "admin@kullanici.com",
@@ -33,14 +33,25 @@ export default function LoginRegisterPage({ onLoginSuccess }) {
         e.preventDefault();
 
         if (email === testUser.email && password === testUser.password) {
+            // Kullanıcının rolünü belirle
+            let role;
+            if (email === 'admin@example.com') {
+                role = 'admin';
+            } else if (email === 'hairdresser@example.com') {
+                role = 'hairdresser';
+            } else {
+                role = 'user';
+            }
+
             // Giriş başarılı olduğunda onLoginSuccess fonksiyonunu çağır
-            onLoginSuccess(email === 'admin@example.com' ? 'admin' : 'user');
+            onLoginSuccess(role);
             navigate('/');  // Kullanıcıyı anasayfaya veya başka bir sayfaya yönlendir
         } else {
             // Giriş başarısız
             alert("E-posta veya şifre hatalı!");
         }
     };
+
 
     // Kayıt olma işlevi
     const handleRegister = (e) => {
