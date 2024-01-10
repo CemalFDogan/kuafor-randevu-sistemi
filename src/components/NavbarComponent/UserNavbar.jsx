@@ -22,6 +22,16 @@ export default function UserNavbar({ onLogout }) {
           </Nav>
         </Navbar.Collapse>
       </Container>
+        <Container className="justify-content-between">
+            {/* Burada kullanıcı için özel navbar içeriğini oluşturun */}
+            {/* Örnek olarak sadece birkaç link ekleyeceğim */}
+            <Nav className="ml-auto">
+                <Nav.Link as={Link} to="/user" className="nav-link">Anasayfa</Nav.Link>
+                <Nav.Link as={Link} to="/user-profile" className="nav-link">Profilim</Nav.Link>
+                <Nav.Link as={Link} to="/user-appointments" className="nav-link">Randevularım</Nav.Link>
+                <Button as={Link} to="/logout" className="nav-button">Çıkış Yap</Button>
+            </Nav>
+        </Container>
     </Navbar>
   );
 }

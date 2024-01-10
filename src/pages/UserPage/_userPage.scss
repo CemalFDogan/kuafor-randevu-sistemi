@@ -1,0 +1,111 @@
+// _WelcomePage.scss
+
+.welcome-section {
+  text-align: center;
+
+  .user-avatar {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+}
+
+.calendar-section {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 200px;
+
+  h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+
+  .react-datepicker__input-container {
+    width: 100%;
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  }
+
+  .react-datepicker {
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    .react-datepicker__header {
+      background-color: #f0f0f0;
+    }
+
+    .react-datepicker__day-names {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+
+      .react-datepicker__day-name {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+
+    .react-datepicker__month {
+      margin: 0;
+    }
+
+    .react-datepicker__day {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      margin: 2px;
+
+      &:hover {
+        background-color: #eee;
+      }
+
+      &.react-datepicker__day--selected {
+        background-color: #428bca;
+        color: #fff;
+
+        &:hover {
+          background-color: #357ebd;
+        }
+      }
+    }
+  }
+}
+
+.appointments-section {
+  text-align: center;
+
+  h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center; // Başlığı ortala
+ }
+}

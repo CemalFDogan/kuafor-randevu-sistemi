@@ -31,7 +31,7 @@ export default function LoginRegisterPage({ onLoginSuccess }) {
     // Giriş yapma işlevi
     const handleLogin = (e) => {
         e.preventDefault();
-
+    
         if (email === testUser.email && password === testUser.password) {
             // Kullanıcının rolünü belirle
             let role;
@@ -42,7 +42,6 @@ export default function LoginRegisterPage({ onLoginSuccess }) {
             } else {
                 role = 'user';
             }
-
             // Giriş başarılı olduğunda onLoginSuccess fonksiyonunu çağır
             onLoginSuccess(role);
             navigate('/');  // Kullanıcıyı anasayfaya veya başka bir sayfaya yönlendir

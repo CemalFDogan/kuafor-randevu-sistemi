@@ -9,9 +9,18 @@ import ServicesPage from './pages/ServicesPage/ServicesPage';
 import TeamPage from './pages/TeamPage/TeamPage';
 import SalonPage from './pages/SalonPage/SalonPage';
 import ContactPage from './pages/ContactPage/ContactPage';
-import AdminPage from './pages/AdminPage/AdminPage';
+import AdminPage from './pages/AdminPage/AdminHomePage';
+import AdminHairdresserPage from './pages/AdminPage/AdminHairdresserPage';
+import AdminServicesPage from './pages/AdminPage/AdminServicesPage';
 import UserPage from './pages/UserPage/UserPage';
-import UserSettings from './pages/UserSettings/UserSettings';
+import UserProfilePage from './pages/UserPage/UserProfilePage';
+import UserAppointmentsPage from './pages/UserPage/UserAppointmentsPage';
+import AppointmentsPage from './pages/AppointmentsPage/AppointmentsPage';
+import HairdresserPage from './pages/HairdresserPage/HairdresserHomePage';
+import HairdresserAppointmentsPage from './pages/HairdresserPage/HairdresserAppointmentsPage';
+import HairdresserProfilePage from './pages/HairdresserPage/HairdresserProfilePage';
+
+
 
 // Bootstrap Nesneleri
 import NavbarComponent from './components/NavbarComponent/NavbarComponent';
@@ -25,7 +34,7 @@ export default function MyApp() {
   // Kullanıcı başarıyla giriş yaptığında çağrılacak fonksiyon
   const handleLoginSuccess = () => {
     setIsLoggedIn(true);
-    setUserRole("user");
+    setUserRole("admin");
   };
   // Çıkış yapma işlevi
   const handleLogout = () => {
@@ -48,7 +57,17 @@ export default function MyApp() {
           <Route path="/login-register" element={<LoginRegisterPage onLoginSuccess={handleLoginSuccess} />} />
           <Route path="/salon" element={<SalonPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/admin" element={<AdminPage />} />,
+          <Route path="/appointments" element={<AppointmentsPage/>}/>
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/admin-hairdresser" element={<AdminHairdresserPage />} />
+          <Route path="/admin-services" element={<AdminServicesPage />} />
+          <Route path="/hairdresser" element={<HairdresserPage/>}/>
+          <Route path="/hairdresser-profile" element={<HairdresserProfilePage/>}/>
+          <Route path="/hairdresser-appointments" element={<HairdresserAppointmentsPage/>}/>
+          <Route path="/user" element={<UserPage/>}/>
+          <Route path="/user-profile" element={<UserProfilePage/>}/>
+          <Route path="/user-appointments" element={<UserAppointmentsPage/>}/>
+
         </Routes>
 
         {/* {
