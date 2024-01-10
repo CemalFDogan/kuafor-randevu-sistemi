@@ -1,0 +1,33 @@
+.sidebar {
+  background-color: #343a40;
+  color: #fff;
+  height: 100vh;
+  padding-top: 20px;
+
+  h2 {
+    color: #fff;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      padding: 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: #495057;
+      }
+    }
+  }
+}
+
+.content {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-top: 56px;
+  }
+}

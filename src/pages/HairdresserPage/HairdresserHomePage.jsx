@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import './_userPage.scss';
+import './_hairdresserHomePage.scss';
 import { Container, Row, Col, Table } from 'react-bootstrap';
 
-export default function UserPage() {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+export default function HairdresserPage() {
+    const [selectedDate, setSelectedDate] = useState(new Date());
   return (
     <Container fluid>
       <Row>

@@ -1,0 +1,58 @@
+.sidebar {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    height: 92.4vh;
+  
+    h2 {
+      margin-bottom: 20px;
+    }
+  
+    form {
+      margin-bottom: 20px;
+    }
+  }
+  .table-wrapper {
+    max-height: 92vh; /* Tablonun maksimum yüksekliği */
+    overflow-y: auto; /* Dikey kaydırma çubuğunu göster */
+  }
+  .content {
+    padding: 0px;
+    thead th {
+        background-color: #f2f2f2; // Başlık arkaplan rengi
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }   
+  
+    table {
+        
+      width: 100%;
+      margin-top: 20px;
+  
+      th, td {
+        padding: 10px;
+        text-align: left;
+      }
+  
+      th {
+      
+        background-color: #333;
+        color: white;
+      }
+  
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+  
+      tr:hover {
+        background-color: #ddd;
+      }
+  
+      td:last-child {
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }

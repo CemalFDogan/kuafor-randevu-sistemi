@@ -31,10 +31,20 @@ export default function LoginRegisterPage({ onLoginSuccess }) {
     // Giriş yapma işlevi
     const handleLogin = (e) => {
         e.preventDefault();
-
+    
         if (email === testUser.email && password === testUser.password) {
+            // Kullanıcının rolünü belirle
+            let role;
+            if (email === 'admin@example.com') {
+                role = 'admin';
+            } else if (email === 'hairdresser@example.com') {
+                role = 'hairdresser';
+            } else {
+                role = 'user';
+            }
+    
             // Giriş başarılı olduğunda onLoginSuccess fonksiyonunu çağır
-            onLoginSuccess(email === 'admin@example.com' ? 'admin' : 'user');
+            onLoginSuccess(role);
             navigate('/');  // Kullanıcıyı anasayfaya veya başka bir sayfaya yönlendir
         } else {
             // Giriş başarısız
