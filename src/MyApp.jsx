@@ -15,7 +15,6 @@ import AdminServicesPage from './pages/AdminPage/AdminServicesPage';
 import UserPage from './pages/UserPage/UserPage';
 import UserProfilePage from './pages/UserPage/UserProfilePage';
 import UserAppointmentsPage from './pages/UserPage/UserAppointmentsPage';
-import AppointmentsPage from './pages/AppointmentsPage/AppointmentsPage';
 import HairdresserPage from './pages/HairdresserPage/HairdresserHomePage';
 import HairdresserAppointmentsPage from './pages/HairdresserPage/HairdresserAppointmentsPage';
 import HairdresserProfilePage from './pages/HairdresserPage/HairdresserProfilePage';
@@ -57,7 +56,6 @@ export default function MyApp() {
           <Route path="/login-register" element={<LoginRegisterPage onLoginSuccess={handleLoginSuccess} />} />
           <Route path="/salon" element={<SalonPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/appointments" element={<AppointmentsPage/>}/>
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/admin-hairdresser" element={<AdminHairdresserPage />} />
           <Route path="/admin-services" element={<AdminServicesPage />} />

@@ -15,27 +15,13 @@ export default function HairdresserNavbar({ onLogout }) {
 
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav>
-            <Nav.Link as={Link} to="/hairdresser/dashboard">Yönetim Paneli</Nav.Link>
-            <Nav.Link as={Link} to="/hairdresser/users">Kullanıcılar</Nav.Link>
-            <Nav.Link as={Link} to="/hairdresser/settings">Ayarlar</Nav.Link>
+            <Nav.Link as={Link} to="/hairdresser" className="nav-link">Anasayfa</Nav.Link>
+            <Nav.Link as={Link} to="/hairdresser-profile" className="nav-link">Profilim</Nav.Link>
+            <Nav.Link as={Link} to="/hairdresser-appointments" className="nav-link">Randevular</Nav.Link>
             <Button as={Link} to="/" className="nav-button" onClick={onLogout}>Çıkış Yap</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
-
-export default function HairdresserNavbar() {
-  return (
-    <Navbar expand="lg" className="custom-navbar">
-        <Container className="justify-content-between">
-            {/* Burada kullanıcı için özel navbar içeriğini oluşturun */}
-            {/* Örnek olarak sadece birkaç link ekleyeceğim */}
-            <Nav className="ml-auto">
-                <Nav.Link as={Link} to="/hairdresser" className="nav-link">Anasayfa</Nav.Link>
-                <Nav.Link as={Link} to="/hairdresser-profile" className="nav-link">Profilim</Nav.Link>
-                <Nav.Link as={Link} to="/hairdresser-appointments" className="nav-link">Randevular</Nav.Link>
-                <Button as={Link} to="/logout" className="nav-button">Çıkış Yap</Button>
-            </Nav>
-        </Container>
     </Navbar>
   );
 }

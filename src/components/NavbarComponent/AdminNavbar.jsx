@@ -7,14 +7,24 @@ export default function AdminNavbar({ onLogout }) {
   return (
     <Navbar expand="lg" className="custom-navbar">
       <Container className="justify-content-between">
+        <Navbar.Brand as={Link} to="/" className="mr-auto">
+          <img src={logo} alt="Logo" />
+        </Navbar.Brand>
 
-        <Nav className="ml-auto">
-          <Nav.Link as={Link} to="/admin/dashboard" className="nav-link">Yönetim Paneli</Nav.Link>
-          <Nav.Link as={Link} to="/admin/users" className="nav-link">Kullanıcılar</Nav.Link>
+        {/* Hamburger Toggle Button */}
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-          <Nav.Link as={Link} to="/admin/settings" className="nav-link">Ayarlar</Nav.Link>
-          <Button as={Link} to="/logout" className="nav-button">Çıkış Yap</Button>
-        </Nav>
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Nav>
+
+
+            <Nav.Link as={Link} to="/admin" className="nav-link">Anasayfa</Nav.Link>
+            <Nav.Link as={Link} to="/admin-hairdresser" className="nav-link">Kuaförler</Nav.Link>
+
+            <Nav.Link as={Link} to="admin-services" className="nav-link">Hizmetler</Nav.Link>
+            <Button as={Link} to="/" className="nav-button" onClick={onLogout}>Çıkış Yap</Button>
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
