@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 .hakkimizda-container {
@@ -33,4 +34,31 @@ p {
 .img-fluid {
   max-width: 100%; /* Resmin maksimum genişliği, container'a sığacak kadar */
   height: auto; /* Oranları koru */
+=======
+@import './aboutPageVariables';
+
+.about-page {
+    font-family: $font-family;
+    color: $primary-color;
+    background-color: $background-color;
+    padding: 2rem;
+
+    h2 {
+        margin-bottom: 1rem;
+        color: $primary-color;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    .centered-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;;
+    }
+
+
+    // Daha fazla stil ekleyebilirsiniz.
+>>>>>>> cemal
 }

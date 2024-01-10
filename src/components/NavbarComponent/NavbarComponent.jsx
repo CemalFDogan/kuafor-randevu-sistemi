@@ -1,9 +1,9 @@
 import AdminNavbar from './AdminNavbar';
 import UserNavbar from './UserNavbar';
 import DefaultNavbar from './DefaultNavbar';
-import HairstylistNavbar from './HairstylistNavbar';
+import HairdresserNavbar from './HairdresserNavbar';
 
-export default function NavbarComponent({ isLoggedIn, userRole }) {
+export default function NavbarComponent({ isLoggedIn, userRole, onLogout }) {
     console.log('isLoggedIn:', isLoggedIn, 'userRole:', userRole); // Durum bilgisini konsola yazdır
 
     if (!isLoggedIn) {
@@ -12,13 +12,13 @@ export default function NavbarComponent({ isLoggedIn, userRole }) {
     }
 
     // Kullanıcı giriş yapmışsa, rolüne göre uygun Navbar'ı döndür
-    switch(userRole) {
+    switch (userRole) {
         case 'admin':
-            return <AdminNavbar />;
+            return <AdminNavbar onLogout={onLogout} />;
         case 'user':
-            return <UserNavbar />;
-        case 'hairstylist':
-            return <HairstylistNavbar />;
+            return <UserNavbar onLogout={onLogout} />;
+        case 'hairdresser':
+            return <HairdresserNavbar onLogout={onLogout} />;
         default:
             // Tanımsız bir rol varsa veya rol belirtilmemişse, varsayılan Navbar'ı döndür
             return <DefaultNavbar />;

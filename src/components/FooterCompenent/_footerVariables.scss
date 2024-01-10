@@ -1,5 +1,10 @@
-// Dosya Yolu: src/styles/utilities/variables/components/_footerVariables.scss
-$footer-background-color: #333;
-$footer-text-color: #fff;
+// Renkler ve stiller navbar ile uyumlu olmalıdır
+$primary-color: #6D7993; // Koyu gri-mavi, şık ve profesyonel bir ana renk
+$secondary-color: #D5D5D5; // Açık gri, metin ve arka planlar için mükemmel
+$link-hover-color: #9099A2; // Açık mavi-gri, linkler üzerine gelindiğinde hoş bir vurgu sağlar
+$accent-color: #E6E2D3; // Soluk bej, vurgular ve öne çıkan öğeler için zarif bir seçim
 
-// Ve diğer değişken tanımlamalarınız...
+// Footer özgü renkleri
+$footer-background-color: darken($primary-color, 10%); // Footer için biraz daha koyu bir ana renk
+$footer-text-color: $secondary-color; // Footer metin rengi
+$footer-heading-color: lighten($primary-color, 20%); // Footer başlık rengi

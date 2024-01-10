@@ -1,67 +1,120 @@
-@import "homePageVariables";
+@import "./homePageVariables";
 
-.homePage {
-  .heroSection {
-    .carousel {
-      .carousel-item {
-        height: 500px;
-        img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 500px;
-          object-fit: cover;
-        }
-        .carousel-caption {
-          position: absolute;
-          bottom: 20%;
-          left: 10%;
-          right: 10%;
-          color: $textColor;
-          h3 {
-            font-size: 2.5rem;
-            font-weight: $headingFontWeight;
-          }
-          p {
-            font-size: 1.2rem;
-          }
-        }
-      }
-    }
-  }
+.home-page {
+  font-family: $font-family;
 
-  .servicesSection {
-    .card {
-      .card-img {
-        height: 100px;
-        object-fit: cover;
-      }
-    }
-  }
-
-  .testimonialsSection {
+  // Slider Stilleri
+  .custom-slider {
     .carousel-item {
+      position: relative;
+      overflow: hidden; // Taşan içeriği gizle
+      height: auto; // Yüksekliği otomatik ayarla
+
       img {
-        height: 300px;
-        object-fit: cover;
+        width: 100%;
+        max-height: 100%; // Maksimum yüksekliği sınırlandır
+        object-fit: contain; // Resimleri kapsayacak şekilde ayarla
       }
+    }
+  }
+
+  // Hizmetler Bölümü
+  .services-section {
+    padding: 2rem 0;
+    background-color: $service-card-bg;
+
+    .service-card {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background-color: $secondary-color;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .icon {
+        font-size: 3rem; // İkon boyutu
+      }
+
+      h3 {
+        margin-top: 0.5rem;
+      }
+
+      p {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  // Müşteri Yorumları
+  .testimonials-section {
+    padding: 2rem 0;
+    background-color: $testimonial-bg;
+    text-align: center;
+
+    .testimonial {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background-color: $secondary-color;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
       p {
         font-style: italic;
       }
-    }
-  }
 
-  @media (max-width: $breakpoint-md) {
-    .heroSection {
-      .carousel {
-        .carousel-item {
-          height: 300px;
-          img {
-            height: 300px;
-          }
-        }
+      .author {
+        font-weight: bold;
+        margin-top: 0.5rem;
       }
     }
+  }
+}
+
+// Responsive stiller
+// Büyük tabletler ve küçük masaüstü ekranlar için
+@media (max-width: 992px) {
+  .home-page {
+    .custom-slider .carousel-item img {
+      height: 400px; // Orta boy cihazlar için yüksekliği ayarla
+    }
+
+    // Diğer orta boy cihaz ayarları...
+  }
+}
+
+// Tabletler için
+@media (max-width: 768px) {
+  .home-page {
+    .custom-slider .carousel-item img {
+      height: 300px; // Tablet cihazlar için yüksekliği ayarla
+    }
+
+    // Diğer tablet ayarları...
+  }
+}
+
+// Büyük mobil cihazlar için
+@media (max-width: 576px) {
+  .home-page {
+    .custom-slider .carousel-item img {
+      height: 250px; // Büyük mobil cihazlar için yüksekliği ayarla
+    }
+
+    // Diğer büyük mobil cihaz ayarları...
+  }
+}
+
+// Küçük mobil cihazlar için
+@media (max-width: 480px) {
+  .home-page {
+    .custom-slider .carousel-item img {
+      height: 200px; // Küçük mobil cihazlar için yüksekliği ayarla
+    }
+
+    // Diğer küçük mobil cihaz ayarları...
   }
 }

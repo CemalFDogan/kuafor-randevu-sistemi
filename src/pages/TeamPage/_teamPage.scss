@@ -1,45 +1,40 @@
-.kuafor-listesi {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .kuafor-karti {
-    position: relative;
-    width: calc(50% - 20px); /* İki sütunlu, aralarında 20px boşluk */
-    margin-bottom: 20px;
-  }
-  
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px; /* Resmin köşelerini yuvarla */
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Saydam siyah overlay */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0; /* Başlangıçta görünmez */
-    transition: opacity 0.3s ease-in-out; /* Animasyon ekleyin */
-    border-radius: 8px; /* Overlay'in köşelerini yuvarla */
-  }
-  
-  .kuafor-karti:hover .overlay {
-    opacity: 1; /* Hover durumunda görünür hale getirin */
-  }
-  
-  .overlay p {
-    color: #fff;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-  }
+@import 'teamPageVariables';
+
+.team-page {
+    font-family: $font-family;
+    color: $primary-color;
+    background-color: $secondary-color;
+    padding: 2rem 0;
+
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+
+        @media (max-width: $breakpoint-md) {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+    }
+
+    .team-member {
+        background-color: #fff; // Kart arka plan rengi
+        padding: 1rem;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        img {
+            max-width: 100%; // Resmin kartın genişliğine sığmasını sağlar
+            height: auto;
+            border-radius: 50%; // Resmi daire şeklinde yapar
+        }
+
+        h3 {
+            margin-top: 0.5rem;
+        }
+
+        p {
+            margin-top: 0.5rem;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+// src\pages\ContactPage\_contactPage.scss
+@import './contactPageVariables';
+
+.contact-page {
+    .contact-card {
+        background-color: $card-bg-color;
+        color: $card-text-color;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: $breakpoint-md) {
+        // Mobil cihazlar için responsif stil düzenlemeleri
+    }
+}

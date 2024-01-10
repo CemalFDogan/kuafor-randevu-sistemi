@@ -1,0 +1,38 @@
+@import './servicesPageVariables';
+
+.services-page {
+    background-color: $services-background-color;
+    padding: 2rem 0;
+
+    .service-card {
+        background-color: $services-card-color;
+        color: $services-description-color;
+        margin-bottom: 1rem;
+        padding: 1.5rem;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: $services-card-shadow;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-title {
+            color: $services-title-color;
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            margin-bottom: 1rem;
+        }
+
+        .service-image {
+            width: 80%;
+            height: auto;
+            border-radius: 5px;
+            margin: auto;
+        }
+    }
+}

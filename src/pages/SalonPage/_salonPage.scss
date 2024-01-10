@@ -7,3 +7,50 @@
   .gallery-image:hover {
     transform: scale(1.05);
   }
+// src\pages\SalonPage\_salonPage.scss
+@import './salonPageVariables';
+
+.salon-page {
+    .salon-nav {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        .nav-link {
+            color: $primary-color;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    .section-card,
+    .collection-card {
+        background-color: $card-bg-color;
+        color: $card-text-color;
+        margin-bottom: 2rem; // Kartların arasındaki boşluğu artır
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); // Gölge etkisini güçlendir
+
+        .card-img-top {
+            height: 400px; // Resim yüksekliğini artır
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem; // İç padding'i artır
+        }
+    }
+
+    @media (max-width: $breakpoint-md) {
+        .salon-nav .nav-link {
+            padding: 0.5rem 1rem;
+        }
+
+        .section-card,
+        .collection-card {
+            .card-img-top {
+                height: 250px; // Mobil cihazlar için yüksekliği azalt
+            }
+        }
+    }
+}
