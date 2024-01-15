@@ -1,9 +1,9 @@
-@import "./adminHomePageVariables";
+@import "../pages/AdminPage/adminHomePageVariables";
 
-.admin-home-page {
+.modal {
     font-family: $font-family;
 
-    .admin-button {
+    .modal-button {
         background-color: $button-bg-color;
         color: $button-text-color;
         margin-right: 1rem;
@@ -13,5 +13,9 @@
         }
     }
 
-    // Diğer özel stiller...
+    /* .modal-input {
+        // Giriş alanları için özel stiller
+    } */
+
+    // Diğer modal özel stilleri...
 }

@@ -3,6 +3,9 @@
 @import "../components/NavbarComponent/adminNavbar";
 @import "../components/FooterCompenent/footer";
 
+// modals
+@import "../modals/modals";
+
 // pages
 @import "../pages/AboutPage/aboutPage";
 @import "../pages/ContactPage/contactPage";
@@ -11,3 +14,6 @@
 @import "../pages/SalonPage/salonPage";
 @import "../pages/LoginRegisterPage/loginRegisterPage";
 @import "../pages/ServicesPage/servicesPage";
+
+// Admin Pages
+@import "../pages/AdminPage/adminHomePage";

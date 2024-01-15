@@ -27,7 +27,7 @@ import FooterComponent from './components/FooterCompenent/FooterComponent';
 
 export default function MyApp() {
   // Yeni Yöntem (React Router v6)
-  const [isLoggedIn, setIsLoggedIn] = useState(false);  // Kullanıcı giriş durumunu tutan state
+  const [isLoggedIn, setIsLoggedIn] = useState(true);  // Kullanıcı giriş durumunu tutan state
   const [userRole, setUserRole] = useState('');  // 'admin' veya 'user'
 
   // Kullanıcı başarıyla giriş yaptığında çağrılacak fonksiyon

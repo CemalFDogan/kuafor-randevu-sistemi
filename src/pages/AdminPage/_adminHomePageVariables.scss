@@ -1,0 +1,10 @@
+// Renkler ve diğer değişkenler
+$primary-color: #6d7993;
+$secondary-color: #9099A2;
+$accent-color: #c5966c;
+$font-family: 'Open Sans', sans-serif;
+
+// Butonlar için stiller
+$button-bg-color: $accent-color;
+$button-hover-bg-color: darken($accent-color, 10%);
+$button-text-color: #fff;
