@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Kuaför Yönetim Sistemi
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+INIF, Uludağ Üniversitesi İnegöl İşletme Fakültesi'nde kullanılacak olan kuaför yönetim sistemi uygulamasıdır.
 
-## Available Scripts
+## Proje Hakkında
 
-In the project directory, you can run:
+### Sistemin Ana Ekranı
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/anasayfa.png" />
 
-### `npm start`
+ Sistemin ana giriş sayfası olan bu ekranla sizi karşılıyoruz. Burada bulunan navigasyon barını kullanarak istediğiniz işlem sayfasına ulaşabilirsiniz.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Giriş Yap - Kayıt Ol
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/kayıt-giriş.png" />
+Uygulama açıldığında kullanıcıyı "Giriş Yap" sayfası karşılıyor. Kullanıcı, e-posta ve şifresini girerek giriş yapıyor. Ayrıca kayıt olma bölümünden de kayıt işlemini 
+gerçekleştirebilirsiniz.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Kullanıcı Ana Sayfası
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/kullanıcı_anasayfa.png" />
+Kullanıcının giriş yaptıktan sonra karşısına çıkacak olan sayfa.
 
-### `npm run build`
+### Kullanıcı Bilgileri Bölümü
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/kullanıcı_profil.png" />
+Kullanıcı bu bölümden kendine ait olan bilgileri düzenleyebilir.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Kullanıcı İçin Randevu Oluşturma/Görüntüleme Sayfası
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/kullanıcı_randevu.png" />
+Kullanıcının almak istediği hizmet için randevu alacağı veya halihazırda almış olduğu randevuları görüntülediği sayfa.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Kuaför Ana Sayfası
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/kuaför_anasayfa.png" />
+Kuaförlerin giriş yaptıktan sonra yönlendirildikleri sayfa.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Kuaför Bilgileri Bölümü
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/kuaför_profil.png" />
+Kuaförlerin bilgilerini ve çalışma zamanlarını düzenleyebildiği sayfa.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Kuaför İçin Randevu Görüntüleme Sayfası
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/kuaför_randevular.png" />
+Kuaförün kendisine gelen randevu isteklerini,onaylanmış ve geçmiş randevularını görüntüleyebildiği sayfa.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Admin Giriş Sayfası
+<img src="https://github.com/Enesilbuldu/frontendReadMe/blob/main/admin_anasayfa.png" />
+Admin yani yöneticinin giriş yaptıktan sonra yönlendirildiği sayfa.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Adminin Düzenleme Ekranı
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/admin_hizmetler.png" />
+Adminlerin kuaförleri düzenlediği ve bilgilerini değiştirebildiği ekran.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Admin Kuaför Ekleme Sayfası
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/admin_kuaförler.png" />
+Adminin kuaför ekleyip silebildiği ekran.
 
-### Code Splitting
+### Salon Bölümlerinin Galerisi
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/salon_bölümler.png" />
+Salonumuzda verilen bazı bölümler için oluşturduğumuz bölümlerimizin galerisi.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Fikir Koleksiyonları
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/salon_koleksiyon.png" />
+Farklı konseptler hakkına fikir alabileceğiniz koleksiyon sayfası.
 
-### Analyzing the Bundle Size
+### Ekip Üyelerimiz 
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/ekip.png" />
+Ekip üyelerimiz hakkında bazı bilgilerin bulunduğu üye sayfamız.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Hizmetlerimiz
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/hizmetlerimiz.png" />
+Hizmet listemizin bulunduğu sayfamız.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### İletişim Bilgileri
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/iletişim.png" />
+Bize ulaşabileceğiniz iletişim bilgilerimizin bulunduğu sayfamız.
 
-### Advanced Configuration
+### Hakkımızda
+<img src="https://raw.githubusercontent.com/Enesilbuldu/frontendReadMe/main/hakkımızda.png" />
+Firmamızın tanıtımını bulabileceğiniz hakkımızda sayfası.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Kullanılan Teknolojiler
+Frontend:
+- HTML
+- CSS
+- JavaScript
+- React
+- Bootstrap
+### Geliştiriciler
+- Şaban Dönmez
+- Halil İbrahim Kartal
+- Cemal Faruk Doğan
+- Ahmet Enes İlbuldu
