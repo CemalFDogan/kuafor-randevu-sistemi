@@ -2,24 +2,27 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './_userPage.scss';
+import resim1 from "../../toplu_cekim.png";
 import { Container, Row, Col, Table } from 'react-bootstrap';
 
 export default function UserPage() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   return (
-    <Container fluid>
+    <Container fluid style={{
+      backgroundImage: `url(${resim1})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      minHeight: '78vh', // Minimum yükseklik ekran boyu kadar
+    }}>
       <Row>
         {/* 9'luk kısım */}
-        <Col md={8}>
-          <div className="welcome-section">
-            <img src="path/to/your/image.jpg" alt="User Avatar" className="user-avatar" />
-            <p>Hoş geldiniz, user </p>
-          </div>
+        <Col md={8} > {/* Yarı saydam beyaz arkaplan */}
+          {/* İçerik */}
         </Col>
 
         {/* 3'lük kısım */}
-        <Col md={4}>
-          {/* Üst kısım */}
+        <Col md={4} > {/* Yarı saydam beyaz arkaplan */}
           <Row>
             <div className="calendar-section">
               <h4>Takvim</h4>
@@ -28,20 +31,19 @@ export default function UserPage() {
                 onChange={(date) => setSelectedDate(date)}
                 dateFormat="dd/MM/yyyy" // Tarih formatı
                 showTimeInput={false} // Saat kısmını devre dışı bırak
-              //open // Takvim açık başlasın
+
               />
             </div>
           </Row>
 
 
-          {/* Alt kısım */}
           <Row>
 
           </Row>
           <div className="appointments-section">
             <h4 >Randevularım</h4>
             <Table striped bordered hover>
-              {/* Tablo başlığı ve içeriği buraya eklenecek */}
+
               <thead>
                 <tr>
                   <th>#</th>
@@ -49,7 +51,7 @@ export default function UserPage() {
                   <th>Hizmet</th>
                   <th>Randevu Saati</th>
                   <th>Randevu Durumu</th>
-                  {/* Diğer sütun başlıkları */}
+
                 </tr>
               </thead>
               <tbody>
@@ -59,15 +61,17 @@ export default function UserPage() {
                   <td>Hizmet 1</td>
                   <td>12:00</td>
                   <td>Onay Bekliyor</td>
-                  {/* Diğer sütun değerleri */}
+
                 </tr>
-                {/* Diğer randevular */}
+
               </tbody>
             </Table>
           </div>
 
         </Col>
-      </Row>
-    </Container>
+      
+    
+      </Row >
+    </Container >
   );
 }
