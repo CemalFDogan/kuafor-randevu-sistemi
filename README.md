@@ -84,7 +84,7 @@ Firmamızın tanıtımını bulabileceğiniz hakkımızda sayfası.
 ### Kullanılan Teknolojiler
 Frontend:
 - HTML
-- CSS
+- SCSS
 - JavaScript
 - React
 - Bootstrap
